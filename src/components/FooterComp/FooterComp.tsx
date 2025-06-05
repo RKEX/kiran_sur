@@ -1,47 +1,51 @@
-import { Facebook, Instagram, LinkedinIcon, TwitterIcon } from "lucide-react";
+import { Facebook, Instagram, TwitterIcon, LinkedinIcon } from "lucide-react";
 
 const FooterComp = () => {
   return (
-    <>
-      <div className="bg-black py-10 w-full ">
-        <div className="flex justify-between container mx-auto ">
-          {/* conatct part start here */}
-          <div className="grid gap-2">
-            <div className="font-bold text-white text-2xl">Contact Us</div>
-            <div className="">
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-lg text-white">Email :</span>
-                <span className="font-semibold  text-white">
-                  kiransurdigitalmarketing@gmail.com
-                </span>
-              </div>
-              <div className=" flex gap-2 items-center">
-                <span className="font-bold text-lg text-white">Phone No :</span>
-                <span className="font-semibold text-center text-white">
-                  9082053525
-                </span>
-              </div>
-            </div>
+    <footer className="bg-black text-white px-6 py-8">
+      <div className=" lg:flex justify-between items-center   ">
+        {/* Contact Section */}
+        <div className="space-y-3">
+          <h2 className="text-2xl font-bold border-b border-white pb-2 w-fit">
+            Contact Us
+          </h2>
+          <p className="text-base md:text-lg">
+            <span className="font-semibold">Email:</span>{" "}
+            kiransurdigitalmarketing@gmail.com
+          </p>
+          <p className="text-base md:text-lg">
+            <span className="font-semibold">Phone:</span> 9082053525
+          </p>
+        </div>
+
+        {/* Follow Us Section */}
+        <div className="py-3">
+          <h2 className="text-2xl font-bold border-b border-white pb-2 w-fit">
+            Follow Us
+          </h2>
+          <div className="flex gap-4 mt-5">
+            <a href="#" aria-label="Facebook">
+              <Facebook className="text-white hover:text-orange-400" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <Instagram className="text-white hover:text-orange-400" />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <TwitterIcon className="text-white hover:text-orange-400" />
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <LinkedinIcon className="text-white hover:text-orange-400" />
+            </a>
           </div>
-          {/* conatct part end here */}
-          {/* Follow Us part start here */}
-          <div className=" grid gap-2">
-            <div className="font-bold text-white text-2xl text-center">
-              Follow Us
-            </div>
-            <div className="">
-              <div className="flex justify-center gap-2">
-                <Facebook className="text-white" />
-                <Instagram className="text-white" />
-                <TwitterIcon className="text-white" />
-                <LinkedinIcon className="text-white" />
-              </div>
-            </div>
-          </div>
-          {/* Follow Us part end here */}
         </div>
       </div>
-    </>
+
+      {/* Bottom line */}
+      <div className="text-center text-sm text-gray-400 mt-8 border-t border-gray-600 pt-4">
+        © {new Date().getFullYear()} Kiran Sur Digital Marketing. All rights
+        reserved.
+      </div>
+    </footer>
   );
 };
 

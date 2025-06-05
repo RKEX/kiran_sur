@@ -2,133 +2,101 @@ import { Button } from "../ui/button";
 
 const CoursesComp = () => {
   return (
-    <>
-      <div className=" flex justify-center flex-col w-full ">
-        <div className="md:flex justify-center gap-8  ">
-          {/* headlines start here */}
-          <div className="grid gap-4 ">
-            <div className="font-bold font-sans text-center mt-4 text-2xl">
-              Learn Digital Marketing and Build Your Career from Scratch
-            </div>
-            <div className="font-semibold text-center ">
-              Hands-on training for students to master SEO, social media,
-              content creation, and earn online through freelancing or jobs.
-            </div>
-          </div>
-          {/* headlines end here */}
-        </div>
-        {/* Details start here */}
-        <div className="">
-          {/* subheadlines start here */}
-          <div className="text-center font-bold  text-xl my-5">
-            Our Student-Focused Courses Include:
-          </div>
-          {/* subheadlines end here */}
-          <div className=" bg-orange-300/25 w-full py-10 ">
-            <div className=" flex gap-10 sm:max-md:flex-col justify-center container mx-auto">
-              <div className="">
-                {/* headlines of details start here */}
-                <div className="font-bold text-lg my-2">
-                  Beginner to Pro Digital Marketing Program
-                </div>
-                {/* headlines of details end here */}
-                {/* list start here */}
-                <div className="">
-                  <ul className="list-disc gap-2 grid font-semibold">
-                    <li>Duration: 2.5 Months</li>
-                    <li>
-                      Covers SEO, Social Media, Google Ads, YouTube, Canva
-                    </li>
-                    <li>
-                      Marketing Funnel DesignPerfect for HS/College students &
-                      freshers
-                    </li>
-                  </ul>
-                </div>
-                {/* list end here */}
-              </div>
-              <div className="">
-                {" "}
-                {/* headlines of details start here */}
-                <div className="font-bold text-lg my-2">
-                  Freelancing & Earning with Digital Skills
-                </div>
-                {/* headlines of details end here */}
-                {/* list start here */}
-                <div className="">
-                  <ul className="list-disc gap-2 grid font-semibold">
-                    <li>Duration: 1.5 Months</li>
-                    <li>Learn Fiverr, Upwork, Portfolio Building</li>
-                    <li>Earn from home using your skills</li>
-                  </ul>
-                </div>
-                {/* list end here */}
-              </div>
-              <div className="">
-                {" "}
-                {/* headlines of details start here */}
-                <div className="font-bold text-lg my-2">
-                  Social Media & YouTube Growth Course
-                </div>
-                {/* headlines of details end here */}
-                {/* list start here */}
-                <div className="">
-                  <ul className="list-disc gap-2 grid font-semibold">
-                    <li>Duration: 1 Month</li>
-                    <li>Instagram Reels, YouTube Monetization, Branding</li>
-                    <li>Best for content creators & student influencers</li>
-                  </ul>
-                </div>
-                {/* list end here */}
-              </div>
-              <div className="">
-                {" "}
-                {/* headlines of details start here */}
-                <div className="font-bold text-lg my-2">
-                  SEO Specialist Training
-                </div>
-                {/* headlines of details end here */}
-                {/* list start here */}
-                <div className="">
-                  <ul className="list-disc gap-2 grid font-semibold">
-                    <li>Duration: 1.5 Months</li>
-                    <li>In-depth Keyword Research, On-page, Off-page SEO</li>
-                    <li>
-                      Ideal for bloggers, web developers, and aspiring SEOs
-                    </li>
-                  </ul>
-                </div>
-                {/* list end here */}
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Details end here */}
-        {/* booking start here */}
-        <div className="">
-          <div className="text-center font-bold text-xl my-5">
-            Enroll Today & Start Your Digital Career
-          </div>
-          <div className="text-center font-semibold text-lg">
-            Get a custom roadmap to grow your future online
-          </div>
-          <div className="flex justify-center gap-2 my-5">
-            {/* hyperlink start here */}
-            <Button className="bg-orange-500 font-semibold hover:bg-orange-600 text-white">
-              <a
-                target="_blank"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSejIrtwikoWLw0j4vBN6w_jIVFuLePrGrwfj2XNvqv-zkfQJQ/viewform?usp=dialog"
-              >
-                Apply today
-              </a>
-            </Button>
-
-            {/* hyperlink end here */}
-          </div>
-        </div>
-        {/* booking end here */}
+    <div className="w-full py-10 ">
+      {/* Headline Section */}
+      <div className="text-center max-w-3xl mx-auto mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-orange-600">
+          Launch Your Digital Career with Expert-Led Training
+        </h2>
+        <p className="text-gray-700 mt-4 font-medium text-base md:text-lg ">
+          Industry-ready programs designed for students and beginners to master
+          SEO, social media, content creation, and start earning online through
+          freelancing or remote jobs.
+        </p>
       </div>
-    </>
+
+      {/* Courses Section */}
+      <div className="bg-orange-50 py-10">
+        <h3 className="text-center text-2xl font-bold mb-8 text-orange-600">
+          Our Specialized Digital Courses
+        </h3>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 px-5 max-w-7xl mx-auto">
+          {/* Course 1 */}
+          <div className="bg-white shadow-md rounded-xl p-5 hover:shadow-lg transition-all">
+            <h4 className="font-bold text-lg mb-3 text-gray-800">
+              Digital Marketing Mastery Program
+            </h4>
+            <ul className="list-disc list-inside text-sm font-medium text-gray-700 space-y-1">
+              <li>Duration: 10 Weeks</li>
+              <li>SEO, Google Ads, Social Media Marketing, Canva</li>
+              <li>Marketing Funnel Setup & Lead Generation</li>
+              <li>Ideal for HS/College students & freshers</li>
+            </ul>
+          </div>
+
+          {/* Course 2 */}
+          <div className="bg-white shadow-md rounded-xl p-5 hover:shadow-lg transition-all">
+            <h4 className="font-bold text-lg mb-3 text-gray-800">
+              Freelancing & Income Skills Bootcamp
+            </h4>
+            <ul className="list-disc list-inside text-sm font-medium text-gray-700 space-y-1">
+              <li>Duration: 6 Weeks</li>
+              <li>Fiverr, Upwork, LinkedIn Profile Building</li>
+              <li>Portfolio Development & Client Handling</li>
+              <li>Perfect for earning from home</li>
+            </ul>
+          </div>
+
+          {/* Course 3 */}
+          <div className="bg-white shadow-md rounded-xl p-5 hover:shadow-lg transition-all">
+            <h4 className="font-bold text-lg mb-3 text-gray-800">
+              Social Media & YouTube Growth Accelerator
+            </h4>
+            <ul className="list-disc list-inside text-sm font-medium text-gray-700 space-y-1">
+              <li>Duration: 4 Weeks</li>
+              <li>Instagram Growth, Reels Strategy, Branding</li>
+              <li>YouTube Monetization Tactics</li>
+              <li>Perfect for content creators & influencers</li>
+            </ul>
+          </div>
+
+          {/* Course 4 */}
+          <div className="bg-white shadow-md rounded-xl p-5 hover:shadow-lg transition-all">
+            <h4 className="font-bold text-lg mb-3 text-gray-800">
+              Advanced SEO Specialist Training
+            </h4>
+            <ul className="list-disc list-inside text-sm font-medium text-gray-700 space-y-1">
+              <li>Duration: 6 Weeks</li>
+              <li>In-depth Keyword Research, Technical SEO</li>
+              <li>On-page, Off-page & Local SEO</li>
+              <li>Ideal for bloggers, developers & marketers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="text-center mt-14 px-4">
+        <h3 className="text-2xl font-bold mb-3 text-gray-800">
+          Ready to Start Your Digital Journey?
+        </h3>
+        <p className="text-gray-600 font-medium mb-6 max-w-xl mx-auto">
+          Apply now to get personalized guidance, hands-on projects, and a clear
+          roadmap to success in the digital world.
+        </p>
+
+        <Button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 text-lg rounded-lg">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSejIrtwikoWLw0j4vBN6w_jIVFuLePrGrwfj2XNvqv-zkfQJQ/viewform?usp=dialog"
+          >
+            Apply Now
+          </a>
+        </Button>
+      </div>
+    </div>
   );
 };
 
