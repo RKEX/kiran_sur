@@ -78,7 +78,9 @@ export default function Page() {
                 className="text-3xl lg:text-6xl font-bold leading-tight"
                 animation="slideLeft"
                 by="word"
-                duration={2}
+                duration={1.5}
+                easing="ease-in-out"
+                delay={0.1}
               >
                 Empowering Your Digital Marketing Journey with Precision and
                 Performance.
@@ -91,6 +93,9 @@ export default function Page() {
                 animation="blurInUp"
                 by="word"
                 once
+                duration={1.5}
+                easing="ease-in-out"
+                delay={0.1}
               >
                 We power digital marketing with precision and performance. As a
                 full-service digital marketing agency, we help brands — big and
