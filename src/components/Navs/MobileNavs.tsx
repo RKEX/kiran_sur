@@ -1,65 +1,102 @@
+"use client";
+
+import { useState } from "react";
 import { Menu } from "lucide-react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const MobileNavs = () => {
+  const [showTools, setShowTools] = useState(false);
+
   return (
-    <>
-      <div className="flex justify-between items-center shadow-2xl p-4 bg-white sticky top-0 z-50">
+    <div className="shadow-2xl p-4 bg-black sticky top-0 z-50 md:hidden">
+      <div className="flex justify-between items-center container mx-auto">
         {/* Logo */}
         <div className="text-orange-500 text-xl font-bold">
-          {" "}
-          <a href="/">Kiran Sur</a>
+          <a className="flex items-center gap-2" href="/">
+            <div className="border-2 font-normal border-orange-500 p-2 text-2xl">
+              KS
+            </div>
+            <div className="antialiased text-xl">digital</div>
+          </a>
         </div>
 
-        {/* Dropdown Navigation */}
-        <div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button>
-                <Menu className="text-orange-500" size={32} />
-              </button>
-            </DropdownMenuTrigger>
+        {/* Sidebar Menu Trigger */}
+        <Sheet>
+          <SheetTrigger asChild>
+            <button aria-label="Open menu">
+              <Menu size={32} className="text-orange-500" />
+            </button>
+          </SheetTrigger>
 
-            <DropdownMenuContent className="w-48 bg-white shadow-lg rounded-md">
-              <DropdownMenuItem>
-                <a
-                  className="text-orange-500 font-semibold text-lg w-full"
-                  href="/"
-                >
-                  Home
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
+          {/* Sidebar Menu Content */}
+          <SheetContent
+            side="right"
+            className="w-64 bg-gray-950 text-orange-500"
+          >
+            <SheetHeader>
+              <SheetTitle className="text-orange-500 text-lg">Menu</SheetTitle>
+            </SheetHeader>
 
-              <DropdownMenuItem>
-                <a
-                  className="text-orange-500 font-semibold text-lg w-full"
-                  href="/consultation"
-                >
-                  Consultation
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
+            <div className="flex flex-col gap-4 text-lg font-semibold px-4 mt-4">
+              <a href="/">Home</a>
+              <a href="/blog">Blog</a>
 
-              <DropdownMenuItem>
-                <a
-                  className="text-orange-500 font-semibold text-lg w-full"
-                  href="/courses"
+              {/* Tools Dropdown */}
+              <div>
+                <button
+                  className="text-left w-full "
+                  onClick={() => setShowTools(!showTools)}
                 >
-                  Courses
-                </a>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
+                  Tools {showTools ? "▲" : "▼"}
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-600 ease-in-out ${
+                    showTools ? "max-h-96 mt-2" : "max-h-0"
+                  }`}
+                >
+                  <div className="ml-4 flex flex-col gap-2 text-base text-orange-400">
+                    <a
+                      className="border border-orange-500 w-full px-5 py-2 rounded-lg"
+                      href="/tools/seo"
+                    >
+                      SEO Analyser
+                    </a>
+                    <a
+                      className="border border-orange-500 w-full px-5 py-2 rounded-lg"
+                      href="/tools/invoice"
+                    >
+                      Invoice Maker
+                    </a>
+                    <a
+                      className="border border-orange-500 w-full px-5 py-2 rounded-lg"
+                      href="/tools/keywords"
+                    >
+                      Keywords Analyser
+                    </a>
+                    <a
+                      className="border border-orange-500 w-full px-5 py-2 rounded-lg"
+                      href="/tools/audit"
+                    >
+                      Site Audit Analyser
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <a href="/about">About Us</a>
+              <a href="/contact">Contact Us</a>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
-    </>
+    </div>
   );
 };
 
