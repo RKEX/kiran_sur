@@ -75,7 +75,7 @@ export default function Page() {
             <div className="w-full mx-auto lg:mx-0">
               <TextAnimate
                 once
-                className="text-3xl lg:text-6xl font-bold leading-tight "
+                className="text-3xl lg:text-6xl font-bold leading-tight"
                 animation="slideLeft"
                 by="word"
                 duration={2}
@@ -87,7 +87,7 @@ export default function Page() {
             <div className="h-1 w-24 lg:w-48 bg-orange-500 my-6 mx-auto lg:mx-0" />
             <div className="w-[90vw] lg:max-w-[65vw] mx-auto lg:mx-0">
               <TextAnimate
-                className="sm:text-xl  lg:text-2xl font-semibold"
+                className="sm:text-xl lg:text-2xl font-semibold"
                 animation="blurInUp"
                 by="word"
                 once
@@ -236,4 +236,4 @@ pot and TikTok — our integrated
       </div>
     </div>
   );
-} 
+}
